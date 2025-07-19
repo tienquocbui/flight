@@ -23,10 +23,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: Test backend
+    - name: Test backend imports
       run: |
         cd src
-        python -c "import api; print('Backend import successful')"
+        python -c "import api; print('✅ Backend import successful')"
+        python -c "from models.airspace import Airspace; print('✅ Airspace model import successful')"
+        python -c "from models.flight import Flight; print('✅ Flight model import successful')"
+        python -c "from algorithms.conflict_detection import detect_conflicts; print('✅ Conflict detection import successful')"
+        python -c "from algorithms.pathfinding import a_star_search; print('✅ Pathfinding import successful')"
     
     - name: Test data loading
       run: |
@@ -54,9 +58,30 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     
     steps:
     - uses: actions/checkout@v4
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: frontend/package-lock.json
+    
+    - name: Install frontend dependencies
+      run: |
+        cd frontend
+        npm ci
+    
+    - name: Build frontend
+      run: |
+        cd frontend
+        CI=false npm run build
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

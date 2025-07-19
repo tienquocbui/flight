@@ -7,6 +7,12 @@
 - Add frontend như regular files
 - GitHub Actions sẽ không còn lỗi submodule
 
+### ✅ **Đã sửa lỗi permissions**
+- Thêm `permissions` section trong workflow
+- `contents: write` - cho phép write vào repository
+- `pages: write` - cho phép deploy lên GitHub Pages
+- `id-token: write` - cho phép authentication
+
 ### 🔧 **Workflows đã tạo**
 
 #### 1. **Test Workflow** (`.github/workflows/test.yml`)
@@ -16,9 +22,13 @@
 - Chạy trên mọi push và PR
 
 #### 2. **Deploy Workflow** (`.github/workflows/deploy.yml`)
-- Deploy frontend lên GitHub Pages
+- Test + Deploy frontend lên GitHub Pages
 - Chỉ chạy trên main branch
 - Cần enable GitHub Pages trong repository settings
+
+#### 3. **Simple Deploy Workflow** (`.github/workflows/deploy-simple.yml`)
+- Chỉ deploy, không test
+- Nhanh hơn cho production
 
 ### 📋 **Cách enable GitHub Pages**
 
@@ -43,10 +53,10 @@
 
 ### 🔍 **Troubleshooting**
 
-#### **Nếu Actions fail:**
-1. Check Actions tab trong GitHub
-2. Xem log lỗi cụ thể
-3. Fix lỗi và push lại
+#### **Nếu Actions fail với 403 error:**
+1. Check repository settings → Actions → General
+2. Ensure "Workflow permissions" is set to "Read and write permissions"
+3. Or manually set permissions in workflow file
 
 #### **Nếu frontend không load:**
 1. Check GitHub Pages settings
@@ -61,22 +71,30 @@
 
 - ✅ **Repository**: https://github.com/tienquocbui/flight
 - ✅ **Submodule fix**: Applied
-- ✅ **Workflows**: Created
+- ✅ **Permissions fix**: Applied
+- ✅ **Workflows**: Created with proper permissions
 - 🔄 **GitHub Pages**: Need to enable
-- 🔄 **Frontend deployment**: Pending
+- 🔄 **Frontend deployment**: Ready after enabling Pages
 
 ### 🎯 **Next Steps**
 
 1. **Enable GitHub Pages** trong repository settings
-2. **Push một commit** để trigger workflow
-3. **Check Actions** để đảm bảo build thành công
-4. **Access deployed site** tại https://tienquocbui.github.io/flight/
+2. **Check repository permissions** → Actions → General
+3. **Push một commit** để trigger workflow
+4. **Check Actions** để đảm bảo build thành công
+5. **Access deployed site** tại https://tienquocbui.github.io/flight/
 
-### 📝 **Notes**
+### 📝 **Repository Settings**
 
-- **Frontend only**: GitHub Pages chỉ deploy frontend
-- **Backend needed**: Cần deploy backend riêng cho full functionality
-- **API calls**: Frontend sẽ gọi localhost:8000 (cần update cho production)
-- **CORS**: Backend cần allow GitHub Pages domain
+#### **Actions Permissions:**
+- Go to Settings → Actions → General
+- Workflow permissions: "Read and write permissions"
+- Allow GitHub Actions to create and approve pull requests: ✅
 
-**Deployment sẽ hoạt động sau khi enable GitHub Pages!** 🚀 
+#### **Pages Settings:**
+- Go to Settings → Pages
+- Source: "Deploy from a branch"
+- Branch: "gh-pages"
+- Folder: "/ (root)"
+
+### 🎉 **Deployment sẽ hoạt động sau khi enable GitHub Pages!** 🚀 
