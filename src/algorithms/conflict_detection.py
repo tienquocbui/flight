@@ -1,5 +1,10 @@
 from typing import List
 from datetime import timedelta
+import sys
+import os
+
+# Add src directory to path to import airspace
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 def detect_conflicts(flights: List):
     conflicts = []
@@ -94,8 +99,8 @@ def detect_conflicts(flights: List):
                             fl_diff = abs(f1.flight_level - f2.flight_level) * 100
                             if fl_diff < 1000:  # 1000ft
                                 # Kiểm tra khoảng cách thực tế giữa 2 waypoint
-                                # Cần import airspace để lấy tọa độ waypoint
                                 try:
+                                    # Import airspace safely
                                     from api import airspace
                                     if wp1 in airspace.waypoints and wp2 in airspace.waypoints:
                                         wp1_data = airspace.waypoints[wp1]
@@ -114,7 +119,7 @@ def detect_conflicts(flights: List):
                                         c = 2 * atan2(sqrt(a), sqrt(1-a))
                                         distance = R * c
                                         
-                                                                                if distance < 10:  # Khoảng cách < 10 Nm
+                                        if distance < 10:  # Khoảng cách < 10 Nm
                                             conflicts.append({
                                                 'type': 'lateral',
                                                 'flight1': f1.callsign,
