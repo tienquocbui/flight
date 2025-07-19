@@ -1,0 +1,301 @@
+{
+    "waypoints": [
+        {
+            "name": "ANINA",
+            "lat": 13.983333333333333,
+            "lon": 107.41666666666667
+        },
+        {
+            "name": "ASUKU",
+            "lat": 14.607222222222221,
+            "lon": 109.24416666666667
+        },
+        {
+            "name": "ATVIT",
+            "lat": 12.140555555555554,
+            "lon": 109.4961111111111
+        },
+        {
+            "name": "BANSU",
+            "lat": 14.286111111111111,
+            "lon": 108.15972222222223
+        },
+        {
+            "name": "BOMPA",
+            "lat": 14.333333333333334,
+            "lon": 107.4
+        },
+        {
+            "name": "DADEN",
+            "lat": 13.999444444444444,
+            "lon": 107.8436111111111
+        },
+        {
+            "name": "ENGIM",
+            "lat": 13.340555555555556,
+            "lon": 108.13916666666667
+        },
+        {
+            "name": "GONLY",
+            "lat": 13.666666666666666,
+            "lon": 107.5
+        },
+        {
+            "name": "IBUNU",
+            "lat": 11.668888888888889,
+            "lon": 108.86805555555554
+        },
+        {
+            "name": "KAMGO",
+            "lat": 12.2875,
+            "lon": 109.10138888888888
+        },
+        {
+            "name": "KARAN",
+            "lat": 12.648888888888889,
+            "lon": 109.15666666666667
+        },
+        {
+            "name": "KUMUN",
+            "lat": 14.971388888888889,
+            "lon": 108.80749999999999
+        },
+        {
+            "name": "LATOM",
+            "lat": 14.879444444444445,
+            "lon": 107.8436111111111
+        },
+        {
+            "name": "MEVON",
+            "lat": 13.336388888888889,
+            "lon": 108.07416666666666
+        },
+        {
+            "name": "MUMGA",
+            "lat": 14.0,
+            "lon": 108.15361111111112
+        },
+        {
+            "name": "NHATA",
+            "lat": 12.225833333333334,
+            "lon": 109.20111111111112
+        },
+        {
+            "name": "NOBID",
+            "lat": 13.312222222222223,
+            "lon": 108.58194444444445
+        },
+        {
+            "name": "SADAS",
+            "lat": 13.32,
+            "lon": 107.82944444444443
+        },
+        {
+            "name": "SADIN",
+            "lat": 15.08,
+            "lon": 108.17722222222223
+        },
+        {
+            "name": "SOSPA",
+            "lat": 11.833333333333334,
+            "lon": 108.6413888888889
+        },
+        {
+            "name": "TATIM",
+            "lat": 14.980555555555556,
+            "lon": 108.01972222222223
+        },
+        {
+            "name": "VILOT",
+            "lat": 15.038611111111111,
+            "lon": 108.11166666666666
+        },
+        {
+            "name": "VIMUT",
+            "lat": 13.962499999999999,
+            "lon": 109.5213888888889
+        },
+        {
+            "name": "VVCA",
+            "lat": 15.412222222222222,
+            "lon": 108.70444444444445
+        },
+        {
+            "name": "VVCR",
+            "lat": 11.994444444444445,
+            "lon": 109.21972222222223
+        },
+        {
+            "name": "VVPK",
+            "lat": 14.00611111111111,
+            "lon": 108.02444444444445
+        },
+        {
+            "name": "VVPC",
+            "lat": 13.957222222222223,
+            "lon": 109.04277777777777
+        },
+        {
+            "name": "VVTH",
+            "lat": 19.8,
+            "lon": 105.6
+        },
+        {
+            "name": "XAQUA",
+            "lat": 14.919444444444444,
+            "lon": 108.10166666666666
+        }
+    ],
+    "edges": [
+        {
+            "source": "ANINA",
+            "target": "DADEN",
+            "distance_nm": 46,
+            "airway": "G474"
+        },
+        {
+            "source": "BANSU",
+            "target": "MUMGA",
+            "distance_nm": 32,
+            "airway": "G474"
+        },
+        {
+            "source": "BANSU",
+            "target": "SADIN",
+            "distance_nm": 88,
+            "airway": "W11"
+        },
+        {
+            "source": "BANSU",
+            "target": "VVCA",
+            "distance_nm": 138,
+            "airway": "W11"
+        },
+        {
+            "source": "BANSU",
+            "target": "VVPK",
+            "distance_nm": 34,
+            "airway": "W11"
+        },
+        {
+            "source": "BOMPA",
+            "target": "VVPK",
+            "distance_nm": 42,
+            "airway": "B202"
+        },
+        {
+            "source": "DADEN",
+            "target": "LATOM",
+            "distance_nm": 97,
+            "airway": "Q2"
+        },
+        {
+            "source": "DADEN",
+            "target": "SADAS",
+            "distance_nm": 75,
+            "airway": "R588"
+        },
+        {
+            "source": "DADEN",
+            "target": "VVPK",
+            "distance_nm": 20,
+            "airway": "G474"
+        },
+        {
+            "source": "ENGIM",
+            "target": "MUMGA",
+            "distance_nm": 73,
+            "airway": "Q1"
+        },
+        {
+            "source": "IBUNU",
+            "target": "VVCR",
+            "distance_nm": 53,
+            "airway": "W2"
+        },
+        {
+            "source": "KAMGO",
+            "target": "KARAN",
+            "distance_nm": 69,
+            "airway": "W2"
+        },
+        {
+            "source": "KAMGO",
+            "target": "VVPC",
+            "distance_nm": 74,
+            "airway": "W2"
+        },
+        {
+            "source": "KARAN",
+            "target": "NHATA",
+            "distance_nm": 47,
+            "airway": "W2"
+        },
+        {
+            "source": "KARAN",
+            "target": "SOSPA",
+            "distance_nm": 106,
+            "airway": "L642"
+        },
+        {
+            "source": "KUMUN",
+            "target": "VVCA",
+            "distance_nm": 50,
+            "airway": "W1"
+        },
+        {
+            "source": "KUMUN",
+            "target": "VVPC",
+            "distance_nm": 115,
+            "airway": "W1"
+        },
+        {
+            "source": "MEVON",
+            "target": "VVPK",
+            "distance_nm": 74,
+            "airway": "W1"
+        },
+        {
+            "source": "MUMGA",
+            "target": "SADAS",
+            "distance_nm": 83,
+            "airway": "Q7"
+        },
+        {
+            "source": "MUMGA",
+            "target": "TATIM",
+            "distance_nm": 109,
+            "airway": "Q6"
+        },
+        {
+            "source": "MUMGA",
+            "target": "VVPK",
+            "distance_nm": 14,
+            "airway": "G474"
+        },
+        {
+            "source": "MUMGA",
+            "target": "VVPC",
+            "distance_nm": 96,
+            "airway": "W2"
+        },
+        {
+            "source": "NHATA",
+            "target": "VVCR",
+            "distance_nm": 26,
+            "airway": "W2"
+        },
+        {
+            "source": "VILOT",
+            "target": "XAQUA",
+            "distance_nm": 13,
+            "airway": "W1"
+        },
+        {
+            "source": "VVPK",
+            "target": "XAQUA",
+            "distance_nm": 102,
+            "airway": "W1"
+        }
+    ]
+}

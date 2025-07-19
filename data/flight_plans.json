@@ -1,0 +1,145 @@
+[
+    {
+        "STT": 1,
+        "Tên tàu bay": "VJC1170",
+        "Loại tàu bay": "A320",
+        "Mực bay": "FL310",
+        "Hướng bay": "Bắc → Nam",
+        "Tuyến bay (từ - đến)": "LATOM → DADEN → VVPK → MUMGA",
+        "Tên đường bay": "Q2 (1 chiều) → W1 → G474",
+        "Tốc độ (Kts)": 460,
+        "Giờ vào FIR": "00:10"
+    },
+    {
+        "STT": 2,
+        "Tên tàu bay": "BAV290",
+        "Loại tàu bay": "B789",
+        "Mực bay": "FL290",
+        "Hướng bay": "Nam → Bắc",
+        "Tuyến bay (từ - đến)": "IBUNU → VVCR → NHATA → KARAN → VVTH",
+        "Tên đường bay": "W2 → L642 (1 chiều)",
+        "Tốc độ (Kts)": 470,
+        "Giờ vào FIR": "00:15"
+    },
+    {
+        "STT": 3,
+        "Tên tàu bay": "VJC1126",
+        "Loại tàu bay": "A321",
+        "Mực bay": "FL330",
+        "Hướng bay": "Đông → Tây",
+        "Tuyến bay (từ - đến)": "VIMUT → VVPC → MUMGA → BANSU → VVCA",
+        "Tên đường bay": "L628 → G474 → W11",
+        "Tốc độ (Kts)": 450,
+        "Giờ vào FIR": "00:20"
+    },
+    {
+        "STT": 4,
+        "Tên tàu bay": "HVN246",
+        "Loại tàu bay": "A320",
+        "Mực bay": "FL350",
+        "Hướng bay": "Tây → Đông",
+        "Tuyến bay (từ - đến)": "GONLY → DADEN → VVPK → MEVON",
+        "Tên đường bay": "Q2 (1 chiều) → R588 → W1",
+        "Tốc độ (Kts)": 430,
+        "Giờ vào FIR": "00:25"
+    },
+    {
+        "STT": 5,
+        "Tên tàu bay": "HVN1186",
+        "Loại tàu bay": "A350",
+        "Mực bay": "FL370",
+        "Hướng bay": "Bắc → Nam",
+        "Tuyến bay (từ - đến)": "TATIM → XAQUA → VVPK → MUMGA → ENGIM",
+        "Tên đường bay": "Q6 (1 chiều) → W1 → G474 → Q1 (1 chiều)",
+        "Tốc độ (Kts)": 480,
+        "Giờ vào FIR": "00:30"
+    },
+    {
+        "STT": 6,
+        "Tên tàu bay": "VJC172",
+        "Loại tàu bay": "B738",
+        "Mực bay": "FL390",
+        "Hướng bay": "Tây → Đông",
+        "Tuyến bay (từ - đến)": "SADAS → VVPK → MEVON",
+        "Tên đường bay": "R588 → W1",
+        "Tốc độ (Kts)": 440,
+        "Giờ vào FIR": "00:35"
+    },
+    {
+        "STT": 7,
+        "Tên tàu bay": "EVA260",
+        "Loại tàu bay": "A310",
+        "Mực bay": "FL300",
+        "Hướng bay": "Bắc → Nam",
+        "Tuyến bay (từ - đến)": "BOMPA → DADEN → VVPK → MUMGA → ENGIM",
+        "Tên đường bay": "Q2 (1 chiều) → W1 → G474 → Q1 (1 chiều)",
+        "Tốc độ (Kts)": 455,
+        "Giờ vào FIR": "00:40"
+    },
+    {
+        "STT": 8,
+        "Tên tàu bay": "BAV254",
+        "Loại tàu bay": "A321",
+        "Mực bay": "FL400",
+        "Hướng bay": "Nam → Bắc",
+        "Tuyến bay (từ - đến)": "SOSPA → VVCR → KARAN → VVTH",
+        "Tên đường bay": "W15 → W2 → L642 (1 chiều)",
+        "Tốc độ (Kts)": 460,
+        "Giờ vào FIR": "00:45"
+    },
+    {
+        "STT": 9,
+        "Tên tàu bay": "PIC772",
+        "Loại tàu bay": "B747",
+        "Mực bay": "FL310",
+        "Hướng bay": "Đông → Tây",
+        "Tuyến bay (từ - đến)": "ASUKU → VVPC → MUMGA → BANSU",
+        "Tên đường bay": "G221 → W2 → G474 → W11",
+        "Tốc độ (Kts)": 420,
+        "Giờ vào FIR": "00:50"
+    },
+    {
+        "STT": 10,
+        "Tên tàu bay": "HVN266",
+        "Loại tàu bay": "A320",
+        "Mực bay": "FL330",
+        "Hướng bay": "Tây → Đông",
+        "Tuyến bay (từ - đến)": "ANINA → DADEN → VVPK → XAQUA",
+        "Tên đường bay": "Q2 (1 chiều) → W1 → Q6 (1 chiều)",
+        "Tốc độ (Kts)": 440,
+        "Giờ vào FIR": "00:55"
+    },
+    {
+        "STT": 11,
+        "Tên tàu bay": "REPAT15",
+        "Loại tàu bay": "A321",
+        "Mực bay": "FL350",
+        "Hướng bay": "Bắc → Nam",
+        "Tuyến bay (từ - đến)": "LATOM → DADEN → SADAS",
+        "Tên đường bay": "Q2 (1 chiều) → R588",
+        "Tốc độ (Kts)": 450,
+        "Giờ vào FIR": "01:00"
+    },
+    {
+        "STT": 12,
+        "Tên tàu bay": "CNS172",
+        "Loại tàu bay": "B777",
+        "Mực bay": "FL390",
+        "Hướng bay": "Tây → Đông",
+        "Tuyến bay (từ - đến)": "GONLY → DADEN → VVPK → MUMGA → NOBID",
+        "Tên đường bay": "Q2 (1 chiều) → R588 → W1 → G474 → W12",
+        "Tốc độ (Kts)": 460,
+        "Giờ vào FIR": "01:05"
+    },
+    {
+        "STT": 13,
+        "Tên tàu bay": "CAL162",
+        "Loại tàu bay": "A310",
+        "Mực bay": "FL410",
+        "Hướng bay": "Nam → Bắc",
+        "Tuyến bay (từ - đến)": "IBUNU → VVCR → NHATA → KARAN → VVTH",
+        "Tên đường bay": "W2 → L642 (1 chiều)",
+        "Tốc độ (Kts)": 440,
+        "Giờ vào FIR": "01:10"
+    }
+]
