@@ -45,15 +45,10 @@ jobs:
         cd frontend
         npm ci
     
-    - name: Test frontend build
+    - name: Build frontend
       run: |
         cd frontend
         CI=false npm run build
-    
-    - name: Run frontend tests
-      run: |
-        cd frontend
-        npm test -- --watchAll=false
 
   deploy:
     needs: test

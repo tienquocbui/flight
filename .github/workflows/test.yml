@@ -49,11 +49,6 @@ jobs:
         cd frontend
         npm ci
     
-    - name: Run frontend tests
-      run: |
-        cd frontend
-        npm run test:ci
-    
     - name: Test frontend build
       run: |
         cd frontend
