@@ -20,12 +20,12 @@ REACT_APP_API_URL=https://your-railway-backend-url.railway.app
    - Add repository variable: `REACT_APP_API_URL`
    - Value: `https://your-railway-backend-url.railway.app`
 
-## 🚂 **Backend Configuration**
+## 🎨 **Backend Configuration**
 
-### **Railway Deployment:**
+### **Render Deployment:**
 1. **Environment Variables:**
 ```
-PYTHONPATH=/app
+PYTHONPATH=/opt/render/project/src
 ```
 
 2. **Build Command:**
@@ -46,12 +46,12 @@ cd src && uvicorn api:app --host 0.0.0.0 --port $PORT
 
 ### **Production:**
 - Frontend: https://tienquocbui.github.io/flight/
-- Backend: https://your-railway-backend-url.railway.app
+- Backend: https://your-render-backend-url.onrender.com
 
 ## 🔄 **Deployment Steps**
 
-### **1. Deploy Backend (Railway):**
-1. Vào https://railway.app/
+### **1. Deploy Backend (Render):**
+1. Vào https://render.com/
 2. Connect GitHub repository
 3. Deploy với cấu hình trên
 4. Copy backend URL
@@ -71,7 +71,7 @@ cd src && uvicorn api:app --host 0.0.0.0 --port $PORT
 
 ### **Backend Test:**
 ```bash
-curl https://your-railway-backend-url.railway.app/stats
+curl https://your-render-backend-url.onrender.com/stats
 ```
 
 ### **Frontend Test:**
@@ -82,9 +82,9 @@ curl https://your-railway-backend-url.railway.app/stats
 
 ### **CORS Issues:**
 - Backend đã có CORS middleware
-- Nếu vẫn lỗi, check Railway environment variables
+- Nếu vẫn lỗi, check Render environment variables
 
 ### **API Connection Issues:**
 - Check backend URL trong frontend
-- Verify Railway deployment status
+- Verify Render deployment status
 - Check browser console for errors 

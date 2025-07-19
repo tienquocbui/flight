@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// API Base URL - Change this for production
+// API Base URL - Change this for production (Render)
 const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:8000";
 
 export const getAirspace = () => axios.get(`${API_BASE}/airspace`);
