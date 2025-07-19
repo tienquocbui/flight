@@ -1,39 +1,34 @@
 import React, { useEffect, useState } from "react";
-import {
-  Container,
-  Typography,
-  Box,
-  Button,
-  TextField,
-  Paper,
-  List,
-  ListItem,
-  ListItemText,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
+import { 
+  Container, 
+  Typography, 
+  Box, 
+  Button, 
+  TextField, 
+  Paper, 
+  List, 
+  ListItem, 
+  ListItemText, 
+  Dialog, 
+  DialogTitle, 
+  DialogContent, 
+  DialogActions, 
   MenuItem,
   Grid,
   Card,
   CardContent,
-  CardActions,
   Chip,
   Alert,
-  IconButton,
-  Tooltip,
   Divider,
   LinearProgress
 } from "@mui/material";
-import {
+import { 
   Flight as FlightIcon,
   Warning as WarningIcon,
   Refresh as RefreshIcon,
   Add as AddIcon,
-  Timeline as TimelineIcon,
   Speed as SpeedIcon,
-  Height as HeightIcon,
-  Schedule as ScheduleIcon
+  Height as HeightIcon
 } from "@mui/icons-material";
 import { getAirspace, getFlights, addFlight, getConflicts, suggestPath, getStats } from "./api";
 
