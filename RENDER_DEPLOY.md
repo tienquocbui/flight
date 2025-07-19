@@ -11,13 +11,14 @@
 3. **Name**: `flight-backend`
 4. **Root Directory**: `src`
 5. **Runtime**: `Python 3`
-6. **Build Command**: `pip install -r ../requirements.txt`
+6. **Build Command**: `pip install --no-cache-dir -r ../requirements.txt`
 7. **Start Command**: `uvicorn api:app --host 0.0.0.0 --port $PORT`
 
 ## Bước 3: Environment Variables
 Thêm trong Render dashboard:
 ```
 PYTHONPATH=/opt/render/project/src
+PIP_NO_CACHE_DIR=1
 ```
 
 ## Bước 4: Get Backend URL
@@ -36,4 +37,9 @@ Push code mới lên GitHub để trigger deployment.
 ## Lưu ý Render:
 - Free tier có thể sleep sau 15 phút không hoạt động
 - Lần đầu access có thể mất 30-60 giây để wake up
-- Có thể upgrade lên paid plan để tránh sleep 
+- Có thể upgrade lên paid plan để tránh sleep
+
+## 🔧 Troubleshooting:
+- **Rust build error**: Đã fix bằng cách dùng pydantic v1 và --no-cache-dir
+- **Build timeout**: Có thể tăng build timeout trong Render settings
+- **Memory issues**: Có thể upgrade lên paid plan để có nhiều RAM hơn 
