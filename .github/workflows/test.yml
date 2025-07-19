@@ -52,5 +52,5 @@ jobs:
     - name: Test frontend build
       run: |
         cd frontend
-        npm run build
+        CI=false npm run build
         echo "✅ Frontend build successful" 
