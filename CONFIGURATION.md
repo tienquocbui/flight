@@ -12,13 +12,13 @@ npm start
 ### **Production Deployment:**
 1. **Tạo file `.env` trong thư mục `frontend/`:**
 ```bash
-REACT_APP_API_URL=https://your-railway-backend-url.railway.app
+REACT_APP_API_URL=https://flight-mupy.onrender.com
 ```
 
 2. **Hoặc set environment variable trong GitHub:**
    - Go to repository settings → Secrets and variables → Actions
    - Add repository variable: `REACT_APP_API_URL`
-   - Value: `https://your-railway-backend-url.railway.app`
+   - Value: `https://flight-mupy.onrender.com`
 
 ## 🎨 **Backend Configuration**
 

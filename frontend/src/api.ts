@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// API Base URL - Change this for production (Render)
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:8000";
+// API Base URL - Production (Render)
+const API_BASE = process.env.REACT_APP_API_URL || "https://flight-mupy.onrender.com";
 
 export const getAirspace = () => axios.get(`${API_BASE}/airspace`);
 export const getFlights = () => axios.get(`${API_BASE}/flights`);

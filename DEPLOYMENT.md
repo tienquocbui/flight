@@ -64,7 +64,7 @@
 3. Check build output trong Actions
 
 #### **Nếu backend không chạy:**
-- Backend cần được deploy riêng (Heroku, Railway, etc.)
+- Backend cần được deploy riêng (Heroku, Render, etc.)
 - Frontend sẽ cần update API URL
 
 ### 📊 **Current Status**
