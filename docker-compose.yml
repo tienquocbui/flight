@@ -1,6 +1,29 @@
 
 
 services:
+  # Development environment với tất cả tools
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8000:8000"
+      - "3000:3000"
+      - "22:22"  # SSH port
+    volumes:
+      - .:/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - PYTHONPATH=/workspace/src
+      - PYTHONUNBUFFERED=1
+      - REACT_APP_API_URL=http://localhost:8000
+    stdin_open: true
+    tty: true
+    command: /usr/local/bin/dev-start
+    networks:
+      - flight-network
+
+  # Production backend
   backend:
     build:
       context: .
@@ -16,6 +39,7 @@ services:
     networks:
       - flight-network
 
+  # Production frontend
   frontend:
     build:
       context: .

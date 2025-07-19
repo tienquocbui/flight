@@ -1,0 +1,59 @@
+FROM python:3.9.7
+
+# Cài đặt system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    git \
+    nodejs \
+    npm \
+    vim \
+    nano \
+    htop \
+    && rm -rf /var/lib/apt/lists/*
+
+# Cài đặt Node.js phiên bản mới nhất
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs
+
+# Cài đặt global npm packages
+RUN npm install -g \
+    create-react-app \
+    @vue/cli \
+    typescript \
+    nodemon
+
+WORKDIR /workspace
+
+# Copy requirements và cài đặt Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy toàn bộ project
+COPY . .
+
+# Tạo script khởi động
+RUN echo '#!/bin/bash\n\
+echo "🚀 Starting Development Environment..."\n\
+echo "📁 Current directory: $(pwd)"\n\
+echo "🐍 Python version: $(python --version)"\n\
+echo "📦 Node.js version: $(node --version)"\n\
+echo "📦 NPM version: $(npm --version)"\n\
+echo "🐳 Docker version: $(docker --version 2>/dev/null || echo "Docker not available")"\n\
+echo ""\n\
+echo "📋 Available commands:"\n\
+echo "  python server.py          - Start backend server"\n\
+echo "  cd frontend && npm start  - Start frontend"\n\
+echo "  docker-compose up         - Start with Docker"\n\
+echo "  python -m pytest          - Run tests"\n\
+echo ""\n\
+echo "🔗 URLs:"\n\
+echo "  Backend API: http://localhost:8000"\n\
+echo "  Frontend: http://localhost:3000"\n\
+echo "  API Docs: http://localhost:8000/docs"\n\
+echo ""\n\
+bash' > /usr/local/bin/dev-start && chmod +x /usr/local/bin/dev-start
+
+EXPOSE 8000 3000
+
+CMD ["/usr/local/bin/dev-start"] 
