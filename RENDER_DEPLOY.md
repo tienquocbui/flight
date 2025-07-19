@@ -22,7 +22,7 @@ PIP_NO_CACHE_DIR=1
 ```
 
 ## Bước 4: Get Backend URL
-- Render sẽ cung cấp URL như: `https://flight-backend.onrender.com`
+- Render sẽ cung cấp URL như: `https://flight-backend-xxxx.onrender.com`
 - Copy URL này để update frontend
 
 ## Bước 5: Update Frontend API URL
@@ -32,7 +32,7 @@ const API_BASE = "https://your-render-url.onrender.com";
 ```
 
 ## Bước 6: Deploy Frontend
-Push code mới lên GitHub để trigger deployment.
+Push code mới lên GitHub để trigger deployment
 
 ## Lưu ý Render:
 - Free tier có thể sleep sau 15 phút không hoạt động
