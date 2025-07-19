@@ -92,17 +92,43 @@ def detect_conflicts(flights: List):
                         time_diff = abs((t1 - t2).total_seconds()) / 60
                         if time_diff < 5:  # 5 phút
                             fl_diff = abs(f1.flight_level - f2.flight_level) * 100
-                            if fl_diff < 1000:
-                                conflicts.append({
-                                    'type': 'lateral',
-                                    'flight1': f1.callsign,
-                                    'flight2': f2.callsign,
-                                    'wp1': wp1,
-                                    'wp2': wp2,
-                                    'time': t1,
-                                    'flight_level1': f1.flight_level,
-                                    'flight_level2': f2.flight_level,
-                                    'time_diff_minutes': time_diff
-                                })
+                            if fl_diff < 1000:  # 1000ft
+                                # Kiểm tra khoảng cách thực tế giữa 2 waypoint
+                                # Cần import airspace để lấy tọa độ waypoint
+                                try:
+                                    from api import airspace
+                                    if wp1 in airspace.waypoints and wp2 in airspace.waypoints:
+                                        wp1_data = airspace.waypoints[wp1]
+                                        wp2_data = airspace.waypoints[wp2]
+                                        
+                                        # Tính khoảng cách bằng Haversine
+                                        from math import radians, sin, cos, sqrt, atan2
+                                        R = 3440.065  # Earth's radius in nautical miles
+                                        lat1, lon1, lat2, lon2 = map(radians, [
+                                            wp1_data.latitude, wp1_data.longitude,
+                                            wp2_data.latitude, wp2_data.longitude
+                                        ])
+                                        dlat = lat2 - lat1
+                                        dlon = lon2 - lon1
+                                        a = sin(dlat/2)**2 + cos(lat1)*cos(lat2)*sin(dlon/2)**2
+                                        c = 2 * atan2(sqrt(a), sqrt(1-a))
+                                        distance = R * c
+                                        
+                                                                                if distance < 10:  # Khoảng cách < 10 Nm
+                                            conflicts.append({
+                                                'type': 'lateral',
+                                                'flight1': f1.callsign,
+                                                'flight2': f2.callsign,
+                                                'wp1': wp1,
+                                                'wp2': wp2,
+                                                'time': t1,
+                                                'flight_level1': f1.flight_level,
+                                                'flight_level2': f2.flight_level,
+                                                'time_diff_minutes': time_diff,
+                                                'distance_nm': round(distance, 2)
+                                            })
+                                except Exception as e:
+                                    # Nếu không thể tính khoảng cách, bỏ qua
+                                    pass
     
     return conflicts 
