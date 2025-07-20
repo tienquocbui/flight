@@ -16,7 +16,7 @@
         "Loại tàu bay": "B789",
         "Mực bay": "FL290",
         "Hướng bay": "Nam → Bắc",
-        "Tuyến bay (từ - đến)": "IBUNU → VVCR → NHATA → KARAN → VVTH",
+        "Tuyến bay (từ - đến)": "IBUNU → VVCR → NHATA → KARAN",
         "Tên đường bay": "W2 → L642 (1 chiều)",
         "Tốc độ (Kts)": 470,
         "Giờ vào FIR": "00:15"
@@ -82,7 +82,7 @@
         "Loại tàu bay": "A321",
         "Mực bay": "FL400",
         "Hướng bay": "Nam → Bắc",
-        "Tuyến bay (từ - đến)": "SOSPA → VVCR → KARAN → VVTH",
+        "Tuyến bay (từ - đến)": "SOSPA → VVCR → KARAN",
         "Tên đường bay": "W15 → W2 → L642 (1 chiều)",
         "Tốc độ (Kts)": 460,
         "Giờ vào FIR": "00:45"
@@ -137,9 +137,31 @@
         "Loại tàu bay": "A310",
         "Mực bay": "FL410",
         "Hướng bay": "Nam → Bắc",
-        "Tuyến bay (từ - đến)": "IBUNU → VVCR → NHATA → KARAN → VVTH",
+        "Tuyến bay (từ - đến)": "IBUNU → VVCR → NHATA → KARAN",
         "Tên đường bay": "W2 → L642 (1 chiều)",
         "Tốc độ (Kts)": 440,
         "Giờ vào FIR": "01:10"
+    },
+    {
+        "STT": 14,
+        "Tên tàu bay": "TEST001",
+        "Loại tàu bay": "A320",
+        "Mực bay": "FL310",
+        "Hướng bay": "Bắc → Nam",
+        "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+        "Tên đường bay": "W1 → G474",
+        "Tốc độ (Kts)": 460,
+        "Giờ vào FIR": "02:00"
+    },
+    {
+        "STT": 15,
+        "Tên tàu bay": "TEST002",
+        "Loại tàu bay": "B737",
+        "Mực bay": "FL310",
+        "Hướng bay": "Đông → Tây",
+        "Tuyến bay (từ - đến)": "VVPC → VVPK → MEVON",
+        "Tên đường bay": "W1 → R588",
+        "Tốc độ (Kts)": 450,
+        "Giờ vào FIR": "02:00"
     }
 ]

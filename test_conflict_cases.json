@@ -1,0 +1,263 @@
+[
+    {
+        "test_case": "CROSSING_CONFLICT_1",
+        "description": "Hai máy bay cắt nhau tại VVPK cùng thời gian",
+        "flights": [
+            {
+                "STT": 101,
+                "Tên tàu bay": "TEST001",
+                "Loại tàu bay": "A320",
+                "Mực bay": "FL310",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+                "Tên đường bay": "W1 → G474",
+                "Tốc độ (Kts)": 460,
+                "Giờ vào FIR": "02:00"
+            },
+            {
+                "STT": 102,
+                "Tên tàu bay": "TEST002",
+                "Loại tàu bay": "B737",
+                "Mực bay": "FL310",
+                "Hướng bay": "Đông → Tây",
+                "Tuyến bay (từ - đến)": "VVPC → VVPK → MEVON",
+                "Tên đường bay": "W1 → R588",
+                "Tốc độ (Kts)": 450,
+                "Giờ vào FIR": "02:00"
+            }
+        ],
+        "expected_conflicts": ["CROSSING"],
+        "conflict_location": "VVPK",
+        "conflict_time": "02:05"
+    },
+    {
+        "test_case": "HEAD_ON_CONFLICT_1",
+        "description": "Hai máy bay bay ngược chiều trên cùng route",
+        "flights": [
+            {
+                "STT": 103,
+                "Tên tàu bay": "TEST003",
+                "Loại tàu bay": "A320",
+                "Mực bay": "FL330",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+                "Tên đường bay": "W1 → G474",
+                "Tốc độ (Kts)": 460,
+                "Giờ vào FIR": "03:00"
+            },
+            {
+                "STT": 104,
+                "Tên tàu bay": "TEST004",
+                "Loại tàu bay": "B737",
+                "Mực bay": "FL330",
+                "Hướng bay": "Nam → Bắc",
+                "Tuyến bay (từ - đến)": "MUMGA → VVPK → DADEN",
+                "Tên đường bay": "G474 → W1",
+                "Tốc độ (Kts)": 450,
+                "Giờ vào FIR": "03:00"
+            }
+        ],
+        "expected_conflicts": ["HEAD_ON"],
+        "conflict_location": "VVPK",
+        "conflict_time": "03:05"
+    },
+    {
+        "test_case": "OVERTAKE_CONFLICT_1",
+        "description": "Máy bay nhanh vượt máy bay chậm trên cùng route",
+        "flights": [
+            {
+                "STT": 105,
+                "Tên tàu bay": "TEST005",
+                "Loại tàu bay": "A320",
+                "Mực bay": "FL350",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+                "Tên đường bay": "W1 → G474",
+                "Tốc độ (Kts)": 500,
+                "Giờ vào FIR": "04:00"
+            },
+            {
+                "STT": 106,
+                "Tên tàu bay": "TEST006",
+                "Loại tàu bay": "B737",
+                "Mực bay": "FL350",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+                "Tên đường bay": "W1 → G474",
+                "Tốc độ (Kts)": 400,
+                "Giờ vào FIR": "04:00"
+            }
+        ],
+        "expected_conflicts": ["OVERTAKE"],
+        "conflict_location": "VVPK",
+        "conflict_time": "04:10"
+    },
+    {
+        "test_case": "LATERAL_CONFLICT_1",
+        "description": "Hai máy bay bay song song gần nhau",
+        "flights": [
+            {
+                "STT": 107,
+                "Tên tàu bay": "TEST007",
+                "Loại tàu bay": "A320",
+                "Mực bay": "FL310",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+                "Tên đường bay": "W1 → G474",
+                "Tốc độ (Kts)": 460,
+                "Giờ vào FIR": "05:00"
+            },
+            {
+                "STT": 108,
+                "Tên tàu bay": "TEST008",
+                "Loại tàu bay": "B737",
+                "Mực bay": "FL310",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "BOMPA → VVPK → MUMGA",
+                "Tên đường bay": "Q2 → W1 → G474",
+                "Tốc độ (Kts)": 450,
+                "Giờ vào FIR": "05:00"
+            }
+        ],
+        "expected_conflicts": ["LATERAL"],
+        "conflict_location": "VVPK",
+        "conflict_time": "05:05"
+    },
+    {
+        "test_case": "MULTIPLE_CONFLICTS_1",
+        "description": "Nhiều loại xung đột cùng lúc",
+        "flights": [
+            {
+                "STT": 109,
+                "Tên tàu bay": "TEST009",
+                "Loại tàu bay": "A320",
+                "Mực bay": "FL310",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+                "Tên đường bay": "W1 → G474",
+                "Tốc độ (Kts)": 460,
+                "Giờ vào FIR": "06:00"
+            },
+            {
+                "STT": 110,
+                "Tên tàu bay": "TEST010",
+                "Loại tàu bay": "B737",
+                "Mực bay": "FL310",
+                "Hướng bay": "Đông → Tây",
+                "Tuyến bay (từ - đến)": "VVPC → VVPK → MEVON",
+                "Tên đường bay": "W1 → R588",
+                "Tốc độ (Kts)": 450,
+                "Giờ vào FIR": "06:00"
+            },
+            {
+                "STT": 111,
+                "Tên tàu bay": "TEST011",
+                "Loại tàu bay": "A321",
+                "Mực bay": "FL310",
+                "Hướng bay": "Nam → Bắc",
+                "Tuyến bay (từ - đến)": "MUMGA → VVPK → DADEN",
+                "Tên đường bay": "G474 → W1",
+                "Tốc độ (Kts)": 440,
+                "Giờ vào FIR": "06:00"
+            }
+        ],
+        "expected_conflicts": ["CROSSING", "HEAD_ON"],
+        "conflict_location": "VVPK",
+        "conflict_time": "06:05"
+    },
+    {
+        "test_case": "VERTICAL_SEPARATION_1",
+        "description": "Hai máy bay cùng route nhưng khác flight level",
+        "flights": [
+            {
+                "STT": 112,
+                "Tên tàu bay": "TEST012",
+                "Loại tàu bay": "A320",
+                "Mực bay": "FL310",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+                "Tên đường bay": "W1 → G474",
+                "Tốc độ (Kts)": 460,
+                "Giờ vào FIR": "07:00"
+            },
+            {
+                "STT": 113,
+                "Tên tàu bay": "TEST013",
+                "Loại tàu bay": "B737",
+                "Mực bay": "FL330",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+                "Tên đường bay": "W1 → G474",
+                "Tốc độ (Kts)": 450,
+                "Giờ vào FIR": "07:00"
+            }
+        ],
+        "expected_conflicts": [],
+        "conflict_location": "N/A",
+        "conflict_time": "N/A",
+        "notes": "Không có xung đột vì khác flight level"
+    },
+    {
+        "test_case": "TIME_SEPARATION_1",
+        "description": "Hai máy bay cùng route nhưng khác thời gian",
+        "flights": [
+            {
+                "STT": 114,
+                "Tên tàu bay": "TEST014",
+                "Loại tàu bay": "A320",
+                "Mực bay": "FL310",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+                "Tên đường bay": "W1 → G474",
+                "Tốc độ (Kts)": 460,
+                "Giờ vào FIR": "08:00"
+            },
+            {
+                "STT": 115,
+                "Tên tàu bay": "TEST015",
+                "Loại tàu bay": "B737",
+                "Mực bay": "FL310",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "DADEN → VVPK → MUMGA",
+                "Tên đường bay": "W1 → G474",
+                "Tốc độ (Kts)": 450,
+                "Giờ vào FIR": "08:30"
+            }
+        ],
+        "expected_conflicts": [],
+        "conflict_location": "N/A",
+        "conflict_time": "N/A",
+        "notes": "Không có xung đột vì khác thời gian"
+    },
+    {
+        "test_case": "COMPLEX_ROUTE_CONFLICT_1",
+        "description": "Xung đột trên route phức tạp",
+        "flights": [
+            {
+                "STT": 116,
+                "Tên tàu bay": "TEST016",
+                "Loại tàu bay": "A320",
+                "Mực bay": "FL310",
+                "Hướng bay": "Bắc → Nam",
+                "Tuyến bay (từ - đến)": "LATOM → DADEN → VVPK → MUMGA → ENGIM",
+                "Tên đường bay": "Q2 → W1 → G474 → Q1",
+                "Tốc độ (Kts)": 460,
+                "Giờ vào FIR": "09:00"
+            },
+            {
+                "STT": 117,
+                "Tên tàu bay": "TEST017",
+                "Loại tàu bay": "B737",
+                "Mực bay": "FL310",
+                "Hướng bay": "Đông → Tây",
+                "Tuyến bay (từ - đến)": "VIMUT → VVPC → MUMGA → BANSU",
+                "Tên đường bay": "L628 → G474 → W11",
+                "Tốc độ (Kts)": 450,
+                "Giờ vào FIR": "09:00"
+            }
+        ],
+        "expected_conflicts": ["CROSSING"],
+        "conflict_location": "MUMGA",
+        "conflict_time": "09:10"
+    }
+] 
